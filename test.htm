@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+	<html>
+	<head>
+<title>Test Javascript Work</title>
+
+<style type="text/css">
+div
+{
+	width: 100%;
+	text-align: center;
+	font-size: 12px;
+}
+#Menu
+{
+	background-color: #777777;
+	height: 20px;
+}
+
+a, a:Visited
+{
+	color: #AAAAAA;
+}
+
+.TestStyle
+{
+	height: 480px;
+	background-color: #2374B6;
+	color: #FFFFFF;
+}
+function changeColour(colour)
+{
+	document.getElementById('Hello').style.background = colour;
+}
+function changeFontColour(colour)
+{
+	document.getElementById('Hello').style.color = colour;
+}
+var min=8;
+var current=12;
+
+function Bigger()
+{
+	current += 2;
+	document.getElementById('Hello').style.fontSize = current+"px";
+}
+
+function Smaller()
+{
+	if (current > min)
+	{
+		current -= 2;
+	}
+	document.getElementById('Hello').style.fontSize = current+"px";
+}
+
+</style>
+
+<script type="text/javascript">
+</script>
+</head>
+
+	<body>
+	<div id="Menu">
+<a href="javascript:Smaller();">A-</a>
+<a href="javascript:Bigger();">A+</a>
+Background:
+<a href="javascript:changeColour('Red');">Red</a>
+<a href="javascript:changeColour('Blue');">Blue</a>
+<a href="javascript:changeColour('White');">White</a>
+Font Colour:
+<a href="javascript:changeFontColour('Red');">Red</a>
+<a href="javascript:changeFontColour('Blue');">Blue</a>
+<a href="javascript:changeFontColour('White');">White</a>
+
+</div>
+<div id="Hello" class="TestStyle">
+This is a DIV Box and some text inside it
+</div>
+
+	</body>
+
+</html>
